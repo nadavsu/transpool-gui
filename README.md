@@ -1,4 +1,4 @@
-[TOC]
+![](images/full-logo-medium.png)
 
 # Application Instructions
 
