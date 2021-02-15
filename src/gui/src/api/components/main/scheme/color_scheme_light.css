@@ -1,0 +1,23 @@
+* {
+    -body-color:       #FFFFFF;
+    -primary-color:    #FF1B57;
+    -secondary-color:  #0399ff;
+    -mix-color:        #974f9c;
+
+    -text-color1:	   BLACK;
+    -text-color2:	   WHITE;
+
+    -hover-color: #fbf8ff;
+    -ripple-color:	BLACK;
+
+}
+
+.root {
+    -fx-background-color: -body-color;
+}
+
+/*LOGO*/
+
+#GridPaneLogo {
+    -fx-background-color: -body-color;
+}

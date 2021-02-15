@@ -1,0 +1,11 @@
+.information-label {
+    -fx-font-weight: Bold;
+    -fx-text-fill: -secondary-color;
+    -fx-font-size: 24px;
+}
+
+.data-label {
+    -fx-font-weight: Bold;
+    -fx-text-fill: BLUE;
+    -fx-font-size: 24px;
+}

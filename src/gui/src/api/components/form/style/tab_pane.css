@@ -1,0 +1,37 @@
+/*Left Tab Pane CSS*/
+
+@import "tab_style.css";
+
+.tab {
+    -fx-background-color: -body-color;
+	-fx-pref-width: 100
+}
+
+.tab .jfx-rippler {
+	-jfx-rippler-fill: -primary-color;
+}
+
+.tab:hover {
+	-fx-background-color: -hover-color
+}
+
+.tab-label {
+    -fx-text-fill: -text-color1 ;
+    -fx-font-size: 13;
+	-fx-font-weight: 300;
+}
+
+.tab-header-background {
+    -fx-background-color: -body-color;
+}
+
+.jfx-tab-pane .tab-selected-line {
+    -fx-background-color: -primary-color;
+}
+
+/*DATA FIELDS*/
+
+.data-field {
+	-jfx-focus-color: -primary-color;
+	-fx-focus-color: -primary-color;
+}

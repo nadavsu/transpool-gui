@@ -1,0 +1,14 @@
+.jfx-button {
+    -fx-background-color: -secondary-color;
+    -fx-opacity: 0.67;
+    -fx-text-fill: -text-color2;
+    -fx-font-weight: 800;
+}
+
+.jfx-button .jfx-rippler {
+    -jfx-rippler-fill: -ripple-color;
+}
+
+.jfx-button:hover {
+    -fx-opacity: 1;
+}

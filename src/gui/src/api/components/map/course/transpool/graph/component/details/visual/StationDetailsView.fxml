@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.components.map.course.transpool.graph.component.details.visual.StationDetailsController">
+   <content>
+      <AnchorPane>
+         <children>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="140.0" minWidth="430.0" prefHeight="250.0" prefWidth="430.0" stylesheets="@StationDetailsStyle.css">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="335.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="13.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="50.88671875" minHeight="10.0" prefHeight="50.88671875" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="167.4405975341797" minHeight="10.0" prefHeight="167.4405975341797" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="21.559402465820312" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="stationNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="407.0" styleClass="data-label" text="Rabin Square (8;6)" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                  <Label alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="162.0" prefWidth="50.0" text="Visitors:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea fx:id="visitingTripsTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="card-body" fx:id="anchorPaneCardBody" maxHeight="400.0" maxWidth="-Infinity" minHeight="267.0" minWidth="200.0" prefHeight="267.0" prefWidth="200.0" stylesheets="@../card_style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#f0f3f5" height="279.0" layoutY="-5.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <ImageView fitHeight="75.0" fitWidth="117.0" layoutX="47.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+         <image>
+            <Image url="@../../../resources/images/cards/request_icon.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="14.0" layoutY="92.0" prefHeight="42.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="23.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelRiderName" prefHeight="44.0" prefWidth="200.0" styleClass="header" text="John Dow" GridPane.rowSpan="2" />
+            <Label fx:id="labelRequestID" prefHeight="10.0" prefWidth="210.0" styleClass="subtext" text="1400202" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="134.0" prefHeight="125.0" prefWidth="156.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="190.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelRequestSource" prefHeight="15.0" prefWidth="210.0" styleClass="normal-text" text="Gets on at MTA" />
+            <Label fx:id="labelRequestDestination" prefHeight="15.0" prefWidth="210.0" styleClass="normal-text" text="Gets off at HIT" GridPane.rowIndex="1" />
+            <Label fx:id="labelArrivalDeparture" prefHeight="44.0" prefWidth="183.0" styleClass="normal-text" text="Requested time of departure:" wrapText="true" GridPane.rowIndex="2" />
+            <Label fx:id="labelTime" prefHeight="17.0" prefWidth="183.0" styleClass="normal-text" text="14:00" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

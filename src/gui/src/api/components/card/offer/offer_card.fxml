@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="card-body" fx:id="anchorPaneCardBody" maxHeight="634.0" maxWidth="-Infinity" minHeight="640.0" minWidth="173.0" prefHeight="640.0" prefWidth="173.0" stylesheets="@../card_style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#f0f3f5" height="640.0" layoutY="4.0" stroke="WHITE" strokeType="INSIDE" width="173.0" />
+      <ImageView fitHeight="75.0" fitWidth="117.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+         <image>
+            <Image url="@../../../resources/images/cards/offer_icon.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="14.0" layoutY="86.0" prefHeight="63.0" prefWidth="173.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="49.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="124.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="12.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="labelDriverName" prefHeight="40.0" prefWidth="200.0" styleClass="header" text="John Dow" GridPane.columnSpan="2" GridPane.rowSpan="2" />
+            <Label fx:id="labelDriverRating" prefHeight="15.0" prefWidth="210.0" styleClass="normal-text" text="Driver rating: 4.73" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="labelOfferID" prefHeight="13.0" prefWidth="91.0" styleClass="subtext" text="1400202" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Label fx:id="labelSchedule" layoutX="13.0" layoutY="145.0" prefHeight="39.0" prefWidth="117.0" styleClass="normal-text" text="Departs BIDAILY on day 4  at 13:00" wrapText="true" />
+      <JFXListView fx:id="listViewStops" layoutX="8.0" layoutY="203.0" orientation="HORIZONTAL" prefHeight="51.0" prefWidth="155.0" />
+      <Label layoutX="13.0" layoutY="185.0" text="Stops:" />
+      <Label fx:id="labelTripDuration" layoutX="12.0" layoutY="262.0" prefHeight="34.0" prefWidth="148.0" styleClass="normal-text" text="Trip is about 40 minutes long" wrapText="true" />
+      <Label fx:id="labelFuelConsumption" layoutX="12.0" layoutY="295.0" prefHeight="51.0" prefWidth="148.0" styleClass="normal-text" text="Average fuel consumption is 30" wrapText="true" />
+      <Label fx:id="labelPPK" layoutX="11.0" layoutY="347.0" prefHeight="17.0" prefWidth="148.0" styleClass="normal-text" text="PPK:" />
+      <JFXListView fx:id="listViewRiderDetails" layoutX="8.0" layoutY="399.0" prefHeight="63.0" prefWidth="148.0" />
+      <Label fx:id="labelPassengerCapacity" layoutX="10.0" layoutY="361.0" prefHeight="34.0" prefWidth="155.0" styleClass="normal-text" text="There are 3 spaces left on this ride." wrapText="true" />
+      <JFXListView fx:id="listViewFeedbacks" layoutX="8.0" layoutY="491.0" prefHeight="131.0" prefWidth="148.0" />
+      <Label layoutX="8.0" layoutY="474.0" text="Feedbacks:" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="320.0" styleClass="left-body" stylesheets="@../style/tab_style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.components.form.request.TripRequestFormController">
+   <children>
+      <VBox id="VBoxTripRequest" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane alignment="CENTER" hgap="10.0" prefHeight="500.0" prefWidth="320.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="34.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="131.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="45.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="48.0" minHeight="7.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="67.0140380859375" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="122.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="348.0" minHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="32.96185302734375" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="242.03814697265625" minHeight="0.0" prefHeight="28.504364013671875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="236.49563598632812" minHeight="10.0" prefHeight="236.49563598632812" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="103.75117492675781" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="textFieldRiderName" labelFloat="true" promptText="Name" styleClass="data-field" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <ImageView fitHeight="90.0" fitWidth="23.0" pickOnBounds="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@../../../resources/images/path.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTimePicker fx:id="timeFieldTime" defaultColor="#0399ff" onAction="#timeSelectedAction" prefHeight="27.0" prefWidth="150.0" promptText="Time" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <children>
+                        <JFXRadioButton fx:id="radioButtonArrivalTime" layoutY="42.0" selectedColor="#0399ff" text="Arrival time" unSelectedColor="#0399ff">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="arrival_departure" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="radioButtonDepartureTime" layoutY="14.0" selected="true" selectedColor="#0399ff" text="Departure time" toggleGroup="$arrival_departure" unSelectedColor="#0399ff" />
+                        <JFXCheckBox fx:id="checkBoxContinuousRide" checkedColor="#0390ff" layoutY="73.0" styleClass="jfx-check-box" text="I want my ride to be continuous" unCheckedColor="#0399ff" />
+                     </children>
+                  </AnchorPane>
+                  <JFXTextField fx:id="textFieldSource" prefHeight="27.0" prefWidth="264.0" promptText="Source" styleClass="data-field" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="textFieldDestination" prefHeight="27.0" prefWidth="264.0" promptText="Destination" styleClass="data-field" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <JFXTextField fx:id="textFieldDay" promptText="Day" styleClass="data-field" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <AnchorPane prefHeight="70.0" prefWidth="320.0">
+               <children>
+                  <JFXButton id="ButtonAddRequest" fx:id="buttonAddRequest" layoutX="43.0" layoutY="20.0" onAction="#newTripRequestButtonAction" prefHeight="27.0" prefWidth="227.0" text="Add Request" />
+               </children>
+            </AnchorPane>
+         </children>
+         <styleClass>
+            <String fx:value="left_side_bar" />
+            <String fx:value="trip_request_menu" />
+         </styleClass>
+      </VBox>
+   </children>
+</AnchorPane>

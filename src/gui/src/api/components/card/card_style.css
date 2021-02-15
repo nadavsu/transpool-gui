@@ -1,0 +1,19 @@
+#card-body {
+    -fx-background-color: WHITE;
+}
+
+.header {
+    -fx-font-size: 20;
+}
+
+.subtext {
+    -fx-font-size: 8;
+}
+
+.normal-text {
+    -fx-font-size: 12;
+}
+
+#price {
+    -fx-font-size: 18;
+}

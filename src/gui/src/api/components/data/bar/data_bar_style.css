@@ -1,0 +1,16 @@
+.trip-list {
+    -fx-background-color: -body-color;
+}
+
+.list-cell, .list-cell:empty {
+    -fx-background-color: -body-color
+}
+
+.list-cell:filled{
+    -fx-background-color: -body-color;
+}
+
+.list-cell:selected {
+    -fx-background-color: -body-color;
+    -fx-text-fill: BLACK;
+}

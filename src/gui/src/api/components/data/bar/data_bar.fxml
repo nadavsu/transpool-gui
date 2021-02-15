@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="320.0" minWidth="240.0" prefHeight="720.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.components.data.bar.DataBarController">
+   <children>
+      <JFXTabPane minHeight="320.0" minWidth="240.0" prefHeight="682.0" prefWidth="240.0" side="RIGHT">
+         <tabs>
+            <Tab closable="false" text="All Offers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listViewTripOffers" nodeOrientation="LEFT_TO_RIGHT" prefHeight="653.0" prefWidth="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="Current Offers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXListView fx:id="listViewCurrentOffers" prefHeight="682.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="Requests">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="listViewTripRequests" nodeOrientation="LEFT_TO_RIGHT" prefHeight="653.0" prefWidth="210.0" styleClass="trip-list" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Matches">
+              <content>
+                <AnchorPane minHeight="230.0" minWidth="230.0" prefHeight="180.0" prefWidth="230.0">
+                     <children>
+                        <JFXListView fx:id="listViewMatchedTrips" layoutX="8.0" prefHeight="682.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+         <stylesheets>
+            <URL value="@../../form/style/tab_pane.css" />
+            <URL value="@data_bar_style.css" />
+         </stylesheets>
+      </JFXTabPane>
+      <AnchorPane prefHeight="35.0" prefWidth="230.0">
+         <children>
+            <Label fx:id="labelTaskProgress" layoutX="13.0" prefHeight="35.0" prefWidth="209.0" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

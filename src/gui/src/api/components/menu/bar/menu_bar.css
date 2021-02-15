@@ -1,0 +1,42 @@
+/*MENU BAR CSS*/
+
+.menu-bar {
+    -fx-background-color: -body-color;
+}
+
+.menu .label {
+	-fx-text-fill: -text-color1;
+}
+
+.menu-item:focused {
+	-fx-background-color: -secondary-color;
+}
+
+.menu-item:focused .label {
+	-fx-text-fill: -body-color;
+}
+
+.menu:hover {
+	-fx-background-color: -secondary-color;
+}
+
+.menu-item {
+	-fx-background-color: -body-color;
+}
+
+.menu-item .label {
+	-fx-text-fill: -text-color1;
+}
+
+.menu-item:hover .label {
+	-fx-text-fill: -body-color;
+}
+
+.menu-item:hover {
+	-fx-background-color: -secondary-color;
+	-fx-text-fill: -body-color;
+}
+
+.menu-item .active {
+	-fx-background-color: -secondary-color;
+}
